@@ -1,0 +1,496 @@
+// Phần scss của Homepage
+$header-bg: #ffffff;
+$primary-color: #2a9d8f;
+$text-color: #343a40;
+$light-text-color: #ffffff;
+$border-color: #dee2e6;
+$transition-speed: 0.3s;
+
+// Content trang HomePage
+.contentHp {
+    padding: 120px 0; 
+
+    h1 {
+        font-size: 72px;
+        text-align: left;
+    }
+
+    p {
+        font-size: 24px;
+        text-align: left;
+    }
+
+        .button {
+            padding: 20px 0;
+            display: flex;
+            gap: 20px;
+
+            .btnTimHieuNgay,
+            .btnBatDau {
+                width: 150px; 
+                height: 48px;
+                border-radius: 24px;
+                font-size: 1rem;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                // **HIỆU ỨNG CHUYỂN ĐỘNG MƯỢT MÀ (TRANSITION)**
+                transition: all 0.3s ease-in-out;
+            }
+    
+    
+           
+            .btnTimHieuNgay {
+                background-color: #efefef; 
+                color: #333;
+                border: 2px solid #e0e0e0; 
+    
+                &:hover {           
+                    background-color: #e0e0e0; 
+                    color: #000;
+                    border-color: #ccc;
+                    transform: translateY(-3px) scale(1.05);
+                    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+                }
+            }
+    
+    
+           // Nút bắt đầu
+            .btnBatDau {
+                background-color: #0F9C5F; 
+                color: white;
+                border: 2px solid #0F9C5F; 
+    
+                &:hover {
+                    background-color: #0d8a54;
+                    color: white;
+                    border-color: #0d8a54;
+
+                    // Thêm hiệu ứng
+                    transform: translateY(-3px) scale(1.05);
+                    box-shadow: 0 6px 15px rgba(15, 156, 95, 0.4); // Đổ bóng với màu xanh
+                }
+            }
+        }
+
+
+}
+
+// Hình ảnh của HomePage
+.imghp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    box-sizing: border-box;
+
+  
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+// Phần của giới thiệu AI
+.gthieuai {
+    background-color: #fefefe;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    flex: 1;
+
+    .robot-image {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 1rem;
+    }
+}
+
+.text-section {
+    flex: 1;
+
+    .about-tag {
+        display: inline-block;
+        background-color: #e0e0e0;
+        padding: 0.25rem 1rem;
+        border-radius: 1rem;
+        font-size: 0.9rem;
+        color: #037222;
+        margin-bottom: 1rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .about-description {
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .stat-item {
+            .stat-number {
+                display: block;
+                font-size: 2rem;
+                font-weight: 700;
+                color: #2e7d32;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                display: block;
+                color: #666;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.giupcaytrong {
+    text-align: center;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.caygapvande {
+    padding: 2rem 0;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.problem-page {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .problem-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #ffffff, #f0f8ff);
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .problem-description {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    .problem-row {
+        margin-bottom: 2rem;
+    }
+
+    .problem-col {
+        padding: 1rem;
+    }
+
+    .info-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+    }
+}
+
+.howtouse {
+    .info-section {
+        padding: 2rem 0;
+        background-color: #ffffff;
+        font-family: 'Inter', sans-serif;
+
+        .section-title {
+            text-align: left;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+
+        .info-row {
+            margin-bottom: 2rem;
+        }
+
+        .info-col {
+            padding: 1rem;
+        }
+
+        .info-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+                color: #27ae60;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #2c3e50;
+                margin-bottom: 0.75rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+                color: #7f8c8d;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+
+
+
+.infor {
+    .h2 {
+        padding: 10px 0;
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 20px;
+        padding: 5px 0;
+    }
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.custom-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    width: 115px;
+    font-weight: bold;
+    height: 48px;
+    border-radius: 20px;
+    border: 1px solid #d5d5d5;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #4caf50;
+    }
+}
+
+img.robot-image {
+
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.image-sectionblogs {
+    padding: 40px 0;
+}
+
+.bolgs {
+    padding: 40px 0;
+}
+
+.niemtin {
+    padding-top: 50px;
+
+    img.matcuoiimg {
+        height: 252px;
+        width: 252px;
+    }
+}
+
+.contact {
+    .contact-section {
+        background: linear-gradient(90deg, #4caf50, #2e7d32);
+        color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: auto;
+        margin: 40px auto;
+        font-family: Arial, sans-serif;
+
+        .contact-label {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+
+            button {
+                border-radius: 10px;
+                border: solid #ffffff;
+                width: 45px;
+                height: 20px;
+                padding: 0;
+            }
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', serif;
+
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+
+            .btn-send {
+                background-color: #ffffff;
+                color: #4caf50;
+
+                &:hover {
+                    background-color: #007d09;
+                    color: white;
+                }
+            }
+
+            .btn-schedule {
+                background-color: #007d09;
+                color: #ffffff;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    /* Responsive cho mobile (dưới 768px) */
+    @media (max-width: 767.98px) {
+        .contact-section {
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .button-group {
+            flex-direction: column;
+            gap: 10px;
+
+            button {
+                width: 100%;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+// Scss của phần Top
+.app-top {
+    position: fixed;
+    bottom: 15%;
+
+    right: 40px;
+    z-index: 1000;
+}
+
+.app-top button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s, transform 0.2s;
+
+    &:hover {
+        background: #0056b3;
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    &:active {
+        background: #003d80;
+    }
+}

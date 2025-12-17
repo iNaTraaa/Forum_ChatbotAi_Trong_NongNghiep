@@ -1,0 +1,89 @@
+// Scss của phần Chatpage
+/* === HIỆU ỨNG TRƯỢT TỪ PHẢI SANG TRÁI (SLIDE IN FROM RIGHT) === */
+.slide-in-right-enter {
+    transform: translateX(100%);
+}
+
+.slide-in-right-enter-active {
+    transform: translateX(0);
+    transition: transform 400ms ease-in-out;
+}
+
+.slide-in-right-exit {
+    transform: translateX(0);
+}
+
+.slide-in-right-exit-active {
+    transform: translateX(-100%);
+    transition: transform 400ms ease-in-out;
+}
+
+
+/* === HIỆU ỨNG PHÓNG TO VÀ MỜ DẦN (ZOOM AND FADE) === */
+.zoom-in-enter {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.zoom-in-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.zoom-in-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.zoom-in-exit-active {
+    opacity: 0;
+    transform: scale(1.2);
+    /* Phóng to nhẹ khi biến mất */
+    transition: opacity 300ms, transform 300ms;
+}
+
+
+/* === HIỆU ỨNG LẬT 3D (FLIP 3D) - Nâng cao hơn === */
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-enter {
+    transform: rotateY(90deg);
+}
+
+.flip-enter-active {
+    transform: rotateY(0deg);
+    transition: transform 500ms;
+}
+
+.flip-exit {
+    transform: rotateY(0deg);
+}
+
+.flip-exit-active {
+    transform: rotateY(-90deg);
+    transition: transform 500ms;
+}
+
+
+
+/* === HIỆU ỨNG FADE (MỜ DẦN) === */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}

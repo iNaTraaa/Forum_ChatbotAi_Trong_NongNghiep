@@ -1,0 +1,94 @@
+// Scss của phần Login
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+// Form đăng nhập
+.login-form {
+    opacity: 0.78;
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    width: 100%;
+    max-width: 26rem;
+    text-align: center;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: 0 12px 40px rgba(44, 62, 80, 0.22);
+    }
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #02ce3f;
+    letter-spacing: 1px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: #f3f6fd;
+    font-size: 1rem;
+    transition: box-shadow 0.2s;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #4dbf0133;
+    }
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: linear-gradient(90deg, #11cb2d 0%, #25fc3e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        background: linear-gradient(90deg, #25fc5e 0%, #11cb17 100%);
+        box-shadow: 0 4px 16px rgba(44, 62, 80, 0.18);
+    }
+}
+
+.back-home-btn {
+    width: 100%;
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(90deg, #bbf7d0 0%, #22c55e 100%);
+    color: #333434;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+
+    &:hover {
+        background: linear-gradient(90deg, #22c55e 0%, #bbf7d0 100%);
+        color: #fff;
+        transform: translateY(-2px) scale(1.04);
+        opacity: 0.97;
+    }
+}

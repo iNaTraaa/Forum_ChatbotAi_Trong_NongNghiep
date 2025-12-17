@@ -1,0 +1,257 @@
+/* Variables */
+$primary-color: #0ab350;
+$primary-hover: #089040;
+$bg-color: #f8f9fa;
+$card-bg: #ffffff;
+$text-main: #333;
+$text-light: #666;
+$border-color: #e1e4e8;
+$error-color: #dc3545;
+$success-color: #28a745;
+
+.create-post-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: $bg-color;
+    min-height: calc(100vh - 60px); // Trừ đi chiều cao header
+}
+
+/* ĐÃ ĐỔI TÊN CLASS TỪ .create-post-container THÀNH .create-post-card CHO KHỚP VỚI JS */
+.create-post-card {
+    width: 100%;
+    max-width: 700px;
+    background: $card-bg;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    animation: fadeIn 0.4s ease-out;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+}
+
+.post-header {
+    margin-bottom: 30px;
+    text-align: center;
+
+    h1 {
+        font-size: 1.8rem;
+        color: $text-main;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    p {
+        color: $text-light;
+        font-size: 0.95rem;
+    }
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 24px;
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: $text-main;
+        font-size: 0.95rem;
+    }
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background-color: #fafbfc;
+
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        background-color: #fff;
+        box-shadow: 0 0 0 3px rgba(10, 179, 80, 0.1);
+    }
+
+    &::placeholder {
+        color: #a0a0a0;
+    }
+}
+
+.content-input {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.5;
+}
+
+/* Upload Styles */
+.file-input-hidden {
+    display: none;
+}
+
+.upload-box {
+    border: 2px dashed $border-color;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #fafbfc;
+
+    &:hover {
+        border-color: $primary-color;
+        background-color: rgba(10, 179, 80, 0.02);
+    }
+
+    .upload-label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: $text-light;
+        font-weight: 500;
+    }
+
+    .upload-icon {
+        font-size: 2rem;
+    }
+}
+
+.image-preview-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid $border-color;
+    margin-top: 10px;
+
+    .image-preview {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .remove-image-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+            background: rgba(220, 53, 69, 0.9);
+        }
+    }
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: $text-light;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: #f1f1f1;
+        color: $text-main;
+    }
+}
+
+.btn-submit {
+    padding: 12px 28px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $primary-hover;
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        background-color: #94dcb4;
+        cursor: not-allowed;
+        transform: none;
+    }
+}
+
+/* Alerts */
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.alert.error {
+    background-color: #fee2e2;
+    color: $error-color;
+    border: 1px solid #fecaca;
+}
+
+.alert.success {
+    background-color: #dcfce7;
+    color: $success-color;
+    border: 1px solid #bbf7d0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

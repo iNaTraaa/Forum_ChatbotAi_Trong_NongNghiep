@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "assets/*": [
+                "Admin/material-dashboard-react-main/src/assets/*"
+            ],
+            "components/*": [
+                "Admin/material-dashboard-react-main/src/components/*"
+            ],
+            "examples/*": [
+                "Admin/material-dashboard-react-main/src/examples/*"
+            ],
+            "layouts/*": [
+                "Admin/material-dashboard-react-main/src/layouts/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ]
+}
